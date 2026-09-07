@@ -2,11 +2,25 @@
 
 ## Status
 
-**NOT YET EXECUTED / NOT READY FOR PRODUCT OWNER SUBMISSION.**
+**READY TO EXECUTE / NOT YET READY FOR PRODUCT OWNER SUBMISSION.**
 
 This checklist is the mandatory Technical Lead end-to-end UAT gate requested for Milestone 3. Results must be executed directly against the business-controlled non-Production Staging environment and recorded as actual PASS/FAIL observations. Automated-test success alone does not satisfy this gate.
 
 Staging target: `https://may-december-staging.onrender.com`
+
+Latest pre-UAT CI evidence: **CI #172 passed** for head `fcfb911ed82a254d5a7f94f212de210966c9d010`.
+
+## Preconditions
+
+Before executing browser UAT:
+
+- Confirm Staging is deployed from the Milestone 3 branch or an equivalent accepted code head containing the reviewed M2 baseline plus M3 evidence changes.
+- Confirm `APP_BASE_URL=https://may-december-staging.onrender.com`.
+- Confirm business-controlled Staging SMTP remains enabled and configured.
+- Prepare synthetic Pending, Active, and Suspended UAT accounts using the retained Phase 0 UAT tooling.
+- Do not paste UAT passwords, SMTP credentials, reset tokens, or other secrets into this document.
+
+Synthetic account preparation is implemented through `phase0:uat:prepare_accounts`, backed by `Phase0::UatDeployHook.prepare_accounts!`. The same-session Active -> Suspended transition can be performed with the retained Staging UAT state-transition flow or `phase0:uat:suspend_active` without ending the existing browser session.
 
 ## Execution rules
 
@@ -17,6 +31,17 @@ Staging target: `https://may-december-staging.onrender.com`
 - Any failed required scenario blocks Milestone 3 submission until corrected and retested.
 - Retain the same browser session where the scenario explicitly requires stale-session verification.
 - Do not record passwords, SMTP secrets, reset tokens, or other credentials in this document.
+
+## Recommended execution order
+
+Execute in this order to minimize account resets and preserve the stale-session test correctly:
+
+1. Run registration and save/resume scenarios (M3-UAT-01 through M3-UAT-04).
+2. Run registration/authentication negative paths (M3-UAT-09 through M3-UAT-13).
+3. Run password recovery end-to-end (M3-UAT-05 through M3-UAT-07, then M3-UAT-14 and M3-UAT-15).
+4. Verify anonymous/Pending/Suspended authorization (M3-UAT-16 through M3-UAT-18).
+5. Prepare/reset the synthetic Active account, sign in, verify Active dashboard access (M3-UAT-08), and **without signing out** perform M3-UAT-19 last.
+6. Record any unexpected behavior even when the final expected result passes.
 
 ## Successful workflows
 
