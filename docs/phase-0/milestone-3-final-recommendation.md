@@ -94,10 +94,8 @@ The practical evidence is mixed in the useful sense: AI supported fast implement
 
 **Gate E — COMPLETE. Final recommendation: GO WITH CONDITIONS.**
 
-The Phase 0 technical/evidence work is substantively complete. Remaining closeout mechanics before Product Owner submission are:
+The Phase 0 technical/evidence work is substantively complete. **PR #7 has been opened as the formal Milestone 3 submission, and final submission-head CI/SHA evidence has been recorded.**
 
-- confirm green CI on the final Milestone 3 submission head;
-- record final commit SHA / CI evidence;
-- open the Milestone 3 submission PR and present the evidence package for Product Owner acceptance.
+The remaining closeout action is **Product Owner review and acceptance**, subject to the current submission head remaining green in CI.
 
-No full-build or fundraising-prototype implementation is authorized by completion of Gate E.
+No full-build or fundraising-prototype implementation is authorized by completion of Gate E or submission of PR #7.
