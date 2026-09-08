@@ -2,7 +2,7 @@
 
 ## Status
 
-**IN PROGRESS — GATE B TECHNICAL REVIEW COMPLETE / GATE C TECHNICAL LEAD STAGING UAT NEXT — NOT YET SUBMITTED FOR PRODUCT OWNER ACCEPTANCE**
+**IN PROGRESS — GATES A-C COMPLETE / GATE D SCORECARD AND COMMERCIAL ANALYSIS NEXT — NOT YET SUBMITTED FOR PRODUCT OWNER ACCEPTANCE**
 
 Milestone 3 begins from the accepted Milestone 2 baseline merged to `main` in PR #4. This milestone is evidence/recommendation work inside the existing Phase 0 authorization; it does not authorize Production deployment, broader MVP implementation, staffing expansion, or new material external commitments.
 
@@ -25,6 +25,8 @@ Milestone 3 begins from the accepted Milestone 2 baseline merged to `main` in PR
 8. Technical Lead end-to-end Staging UAT evidence.
 9. Final Technical Lead Go / Go-with-conditions / No-Go recommendation.
 10. Final Milestone 3 CI/SHA evidence and submission PR.
+11. Revised full-build estimate informed by the completed Phase 0 evidence, presented separately from the prior planning estimate.
+12. Separate fundraising visual-prototype estimate against the supplied prototype BRD; estimate only, not authorization to begin prototype work.
 
 ## Work sequence
 
@@ -44,50 +46,23 @@ Completed review documents:
 - `docs/phase-0/security-review.md`;
 - `docs/phase-0/code-quality-review.md`.
 
-Review scope covered:
+No reviewed finding currently requires correction before Milestone 3 submission within the authorized non-Production Phase 0 scope. Future-MVP conditions to carry into the final recommendation include resilient asynchronous email delivery, removal/disablement of Phase 0 UAT-only routes before Production, authentication/recovery abuse controls, and evolution of authorization/domain structure as application complexity grows.
 
-- Rails architecture;
-- authorization/state transition behavior;
-- authentication/password recovery;
-- environment/configuration/secrets boundaries;
-- automated-test coverage;
-- maintainability/code quality;
-- residual risk.
+### Gate C — Technical Lead end-to-end Staging UAT — COMPLETE
 
-No reviewed finding currently requires correction before Milestone 3 submission within the authorized non-Production Phase 0 scope. The review identified future-MVP conditions that must be carried into the final recommendation, including resilient asynchronous email delivery, explicit removal/disablement of Phase 0 UAT-only routes before Production, authentication/recovery abuse controls, and evolution of authorization/domain structure as application complexity grows.
+Technical Lead Matheus Moura executed the required end-to-end Staging UAT on **2026-09-08** against the business-controlled non-Production Staging environment.
 
-### Gate C — Technical Lead end-to-end Staging UAT — NEXT / NOT YET EXECUTED
+- Required scenarios: **19**
+- Passed: **19**
+- Failed: **0**
+- Submission-blocking defects discovered: **0**
+- Successful workflows covered registration, save/resume, registration completion, valid authentication, password-recovery delivery/token lifecycle and Active-member restricted access.
+- Negative workflows covered password validation, duplicate normalization, login/recovery non-enumeration, invalid/consumed reset tokens and anonymous/Pending/Suspended authorization.
+- Same-session Active -> Suspended stale-state authorization was explicitly exercised and passed with immediate denial on the next request without reauthentication.
 
-The execution checklist is recorded in `docs/phase-0/milestone-3-uat.md`.
+Full execution evidence is recorded in `docs/phase-0/milestone-3-uat.md`.
 
-Before Product Owner submission, the Technical Lead must execute the relevant accepted pilot workflows directly against non-Production Staging and record actual PASS/FAIL results.
-
-Minimum successful workflows:
-
-- registration Step 1;
-- guided save/resume through sign-out/sign-in;
-- registration completion while Pending;
-- valid authentication;
-- password recovery email delivery;
-- valid recovery token and password update;
-- Active member restricted-feature access.
-
-Minimum failure/negative workflows:
-
-- password shorter than minimum;
-- normalized duplicate email;
-- wrong-password/nonexistent-user generic behavior;
-- nonexistent-email recovery non-enumeration;
-- invalid reset token;
-- used reset token reuse attempt;
-- anonymous restricted-route denial;
-- Pending member restricted-route denial;
-- Suspended member denial;
-- same-session Active -> Suspended stale-state denial.
-
-No Milestone 3 package should be submitted while a required scenario is failed or unverified. Any defect found during Technical Lead UAT must be retained in the defect/rework logs, corrected, retested and reflected in actual effort accounting.
-
-### Gate D — Scorecard and commercial analysis
+### Gate D — Scorecard and commercial analysis — NEXT
 
 Consolidate actual Phase 0 metrics including, where supported by recorded evidence:
 
@@ -106,6 +81,13 @@ Consolidate actual Phase 0 metrics including, where supported by recorded eviden
 - observed delivery/correction cycle characteristics.
 
 Metrics that were not actually recorded must be marked **not reliably measured** rather than reconstructed without evidence.
+
+Gate D will also prepare the requested commercial comparison without silently expanding authorized implementation scope:
+
+- prior full-build/Essential-MVP planning baseline;
+- revised full-build estimate informed by Phase 0 evidence and the same AI-assisted/human-review delivery concept;
+- separate fundraising visual-prototype estimate against the supplied controlled BRD;
+- explicit assumptions, human review/testing burden, reuse, exclusions and confidence for each estimate.
 
 ### Gate E — Final recommendation
 
@@ -128,6 +110,7 @@ Milestone 3 is ready for Product Owner acceptance testing/review only when all o
 - CI is green on the final submission head;
 - final effort/rework/defect figures are reconciled;
 - final recommendation is explicitly recorded;
-- evidence references the final commit SHA and CI run.
+- evidence references the final commit SHA and CI run;
+- revised full-build and fundraising-prototype estimates are clearly separated and presented as planning/commercial outputs, not implementation authorization.
 
 The goal is a Technical Lead submission that has already been independently validated and is believed ready for Product Owner acceptance, minimizing correction/resubmission cycles.
