@@ -2,7 +2,7 @@
 
 ## Status
 
-**IN PROGRESS — GATES A-C COMPLETE / GATE D SCORECARD AND COMMERCIAL ANALYSIS NEXT — NOT YET SUBMITTED FOR PRODUCT OWNER ACCEPTANCE**
+**IN PROGRESS — GATES A-D COMPLETE / GATE E FINAL RECOMMENDATION NEXT — NOT YET SUBMITTED FOR PRODUCT OWNER ACCEPTANCE**
 
 Milestone 3 begins from the accepted Milestone 2 baseline merged to `main` in PR #4. This milestone is evidence/recommendation work inside the existing Phase 0 authorization; it does not authorize Production deployment, broader MVP implementation, staffing expansion, or new material external commitments.
 
@@ -62,34 +62,43 @@ Technical Lead Matheus Moura executed the required end-to-end Staging UAT on **2
 
 Full execution evidence is recorded in `docs/phase-0/milestone-3-uat.md`.
 
-### Gate D — Scorecard and commercial analysis — NEXT
+### Gate D — Scorecard and commercial analysis — COMPLETE
 
-Consolidate actual Phase 0 metrics including, where supported by recorded evidence:
+The Phase 0 evidence scorecard has been reconciled through Technical Lead Staging UAT.
 
-- human effort;
-- specification/clarification;
-- implementation;
-- AI-assisted work/supervision;
-- review;
-- rework;
-- testing/Staging validation;
-- defect correction;
-- elapsed effort;
-- accepted-output efficiency;
-- material rewrite/rework metric;
-- fixed milestone cost;
-- observed delivery/correction cycle characteristics.
+Supported human-effort evidence:
 
-Metrics that were not actually recorded must be marked **not reliably measured** rather than reconstructed without evidence.
+- M1: **15.0h** actual/reconstructed human effort.
+- M2: **24.0h** final confirmed human effort.
+- M3: **20–30h** retrospective approximate actual human-effort range supplied by the Technical Lead, with **25h** used only as a planning midpoint.
+- Phase 0: **59–69h** human-effort range, **64h planning midpoint**.
 
-Gate D will also prepare the requested commercial comparison without silently expanding authorized implementation scope:
+The M3 category-level split was not contemporaneously recorded. No allocation among AI supervision, review, documentation, UAT, testing or commercial analysis is invented.
 
-- prior full-build/Essential-MVP planning baseline;
-- revised full-build estimate informed by Phase 0 evidence and the same AI-assisted/human-review delivery concept;
-- separate fundraising visual-prototype estimate against the supplied controlled BRD;
-- explicit assumptions, human review/testing burden, reuse, exclusions and confidence for each estimate.
+Quality/rework evidence:
 
-### Gate E — Final recommendation
+- M1 explicit rework: **1.0h / 15.0h = 6.7%**.
+- M2 identifiable correction/rework-related effort: **6.0h / 24.0h = 25.0%**.
+- Phase 0 identifiable correction/rework evidence: **at least 7.0h**; a complete Phase 0 rework percentage is not claimed because M3 category-level rework was not separately measured.
+- M3 Technical Lead UAT: **19/19 PASS, 0 FAIL, 0 new submission-blocking defects**.
+
+AI-assisted productivity conclusion:
+
+- AI materially assisted delivery, review and evidence preparation.
+- The evidence does not support a defensible numeric percentage of hours saved or a counterfactual non-AI duration.
+- Human Technical Lead supervision remained necessary for scope interpretation, review, correction, Staging configuration, security/architecture judgment and browser-level UAT.
+- Future planning may assume continued AI assistance under accountable human review, but not unsupervised AI delivery or a blanket percentage efficiency reduction.
+
+Commercial-analysis rule established by Gate D:
+
+- the prior full-build estimate remains the comparison baseline;
+- the revised full-build estimate must be recalculated by workstream, explicitly accounting for Phase 0 reuse, remaining implementation, human review/testing, expected AI assistance and contingency;
+- the fundraising visual prototype remains separate, unexecuted scope and requires explicit authorization before implementation;
+- approximate/unmeasured Phase 0 metrics must not be converted into false precision.
+
+Detailed metrics and qualifications are recorded in `docs/phase-0/phase-0-scorecard.md` and `docs/phase-0/effort-log.md`.
+
+### Gate E — Final recommendation — NEXT
 
 Prepare the final Technical Lead recommendation as exactly one of:
 
@@ -98,6 +107,15 @@ Prepare the final Technical Lead recommendation as exactly one of:
 - **NO-GO** — pilot evidence does not support proceeding under the evaluated approach.
 
 The recommendation must address architecture, security, maintainability, testing quality, delivery predictability, rework/defect rate, human supervision burden, AI-assisted delivery effectiveness, cost/time evidence and residual risks.
+
+Gate E must also complete the closeout commercial comparison requested after the original Phase 0 authorization:
+
+- original full-build planning baseline;
+- revised full-build estimate informed by Phase 0, calculated workstream by workstream;
+- separate Fundraising Visual Prototype estimate against the supplied approved BRD;
+- explanation of what changed and why, including reuse, AI assistance, human review/testing, contingency, assumptions and exclusions.
+
+The prototype estimate is a planning/commercial deliverable only. Prototype execution is **not authorized** by Milestone 3.
 
 ## Submission gate
 
