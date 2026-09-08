@@ -8,6 +8,7 @@ Record actual human effort throughout the pilot. Log specification/clarification
 | 2026-08-31 to 2026-09-01 | Milestone 1 closure documentation, governance reconciliation, Staging setup and deploy verification | — | 1.0h | 1.0h | 0.5h | 0.5h | 1.0h | — | 4.0h | Actual recorded/reconstructed human time supplied by the Technical Lead. Includes closure documentation reconciliation, repository governance confirmation, Render Staging setup/deployment follow-up, lockfile/reproducibility correction, and final CI/deploy verification. |
 | 2026-09-01 to 2026-09-03 | Milestone 2 Registration / Pending Member + account-state authorization pilot slice — confirmed baseline | 2.0h | 8.0h | 3.0h | 2.0h | 2.0h | 3.0h | 1.0h | 21.0h | Approximate actual human effort supplied and category split confirmed by Matheus Moura. Rework includes the scope-completeness correction for guided registration save/resume and password recovery. Defect correction includes Staging deployment correction and acceptance-review corrections. |
 | 2026-09-03 | Milestone 2 post-baseline password-recovery/SMTP correction and final Product Owner UAT support | — | — | — | — | — | — | — | 3.0h | Additional actual human effort confirmed by Matheus Moura after the 21.0h baseline. This 3.0h covers the post-baseline password-recovery/SMTP correction cycle and final Staging/UAT support. No unsupported category-level split is invented; the aggregate is treated as identifiable correction/rework-related effort for the final M2 metric. |
+| 2026-09-04 to 2026-09-08 | Milestone 3 evidence consolidation, architecture/security/code-quality review, documentation, Technical Lead Staging UAT and commercial-analysis preparation | — | — | — | — | — | — | — | 20–30h estimated range; 25h planning midpoint | Retrospective approximate actual human-effort range supplied by Technical Lead Matheus Moura on 2026-09-08. No reliable category-level split was contemporaneously recorded, so no allocation across review, AI supervision, documentation, testing or other categories is invented. The 25h midpoint is used only for planning/comparison, not represented as an exact timesheet measurement. Technical Lead Staging UAT completed 19/19 required scenarios PASS with no new submission-blocking defect found. |
 
 ## Milestone summaries
 
@@ -47,7 +48,17 @@ Milestone 2 was explicitly accepted by Product Owner Michael Fitzgerald on **202
 
 ### Milestone 3
 
-Milestone 3 — Evidence & Recommendation — is now the active Phase 0 milestone. No Milestone 3 human-effort amount is recorded here until actual effort is supplied/confirmed. Work for M3 must continue to be logged using the same evidence rules below.
+Milestone 3 — Evidence & Recommendation — has a Technical Lead-supplied retrospective approximate actual human-effort range of **20–30 hours**, with a **25-hour planning midpoint**. This range covers evidence/review work, documentation, Technical Lead Staging UAT, and commercial-analysis preparation through 2026-09-08.
+
+Because M3 time was not captured contemporaneously by category, the range is intentionally retained as an aggregate. The documentation must not fabricate a split between AI-assisted supervision, human review, testing, documentation, or other categories. The midpoint may be used for planning comparisons only.
+
+### Phase 0 aggregate human effort through Gate D
+
+- M1: **15.0h**.
+- M2: **24.0h**.
+- M3: **20–30h retrospective approximate actual range**.
+- Phase 0 total range: **59–69h**.
+- Planning midpoint: **64h**.
 
 ## Logging rules
 
