@@ -2,7 +2,7 @@
 
 ## Status
 
-**IN PROGRESS — GATES A-D COMPLETE / GATE E FINAL RECOMMENDATION NEXT — NOT YET SUBMITTED FOR PRODUCT OWNER ACCEPTANCE**
+**GATES A-E COMPLETE — FINAL CI/SHA AND SUBMISSION PR PENDING PRODUCT OWNER ACCEPTANCE**
 
 Milestone 3 begins from the accepted Milestone 2 baseline merged to `main` in PR #4. This milestone is evidence/recommendation work inside the existing Phase 0 authorization; it does not authorize Production deployment, broader MVP implementation, staffing expansion, or new material external commitments.
 
@@ -15,120 +15,76 @@ Milestone 3 begins from the accepted Milestone 2 baseline merged to `main` in PR
 
 ## Required deliverables
 
-1. Acceptance evidence package.
-2. Phase 0 measurement scorecard.
-3. Consolidated defect/rework evidence.
-4. Architecture review findings.
-5. Code-quality / maintainability review findings.
-6. Security review findings.
-7. Cost/time summary.
-8. Technical Lead end-to-end Staging UAT evidence.
-9. Final Technical Lead Go / Go-with-conditions / No-Go recommendation.
-10. Final Milestone 3 CI/SHA evidence and submission PR.
-11. Revised full-build estimate informed by the completed Phase 0 evidence, presented separately from the prior planning estimate.
-12. Separate fundraising visual-prototype estimate against the supplied prototype BRD; estimate only, not authorization to begin prototype work.
+1. Acceptance evidence package — COMPLETE.
+2. Phase 0 measurement scorecard — COMPLETE.
+3. Consolidated defect/rework evidence — COMPLETE.
+4. Architecture review findings — COMPLETE.
+5. Code-quality / maintainability review findings — COMPLETE.
+6. Security review findings — COMPLETE.
+7. Cost/time summary — COMPLETE.
+8. Technical Lead end-to-end Staging UAT evidence — COMPLETE, 19/19 PASS.
+9. Final Technical Lead recommendation — COMPLETE: **GO WITH CONDITIONS**.
+10. Final Milestone 3 CI/SHA evidence and submission PR — PENDING FINAL HEAD CI.
+11. Revised full-build estimate informed by Phase 0 — COMPLETE.
+12. Separate Fundraising Visual Prototype estimate — COMPLETE; execution not authorized.
 
-## Work sequence
+## Gates
 
 ### Gate A — Baseline consolidation — COMPLETE
 
-- M1 and M2 evidence confirmed in the Phase 0 documentation set.
-- Effort, defect, rework, CI and acceptance records reconciled for the working M3 baseline.
-- Accepted M2 values preserved: **24.0h actual human effort** and **6.0h identifiable correction/rework-related effort (25.0%)**.
-- M2 acceptance, merge and payment status recorded.
-- Initial Phase 0 scorecard established without inventing unavailable metrics.
+M1/M2 evidence, effort, defect/rework, CI, acceptance, merge and payment records reconciled.
 
 ### Gate B — Technical review — COMPLETE
 
-Completed review documents:
+Architecture, security and code-quality reviews completed. No Phase 0 submission blocker identified. Future-MVP conditions retained.
 
-- `docs/phase-0/architecture-review.md`;
-- `docs/phase-0/security-review.md`;
-- `docs/phase-0/code-quality-review.md`.
+### Gate C — Technical Lead Staging UAT — COMPLETE
 
-No reviewed finding currently requires correction before Milestone 3 submission within the authorized non-Production Phase 0 scope. Future-MVP conditions to carry into the final recommendation include resilient asynchronous email delivery, removal/disablement of Phase 0 UAT-only routes before Production, authentication/recovery abuse controls, and evolution of authorization/domain structure as application complexity grows.
-
-### Gate C — Technical Lead end-to-end Staging UAT — COMPLETE
-
-Technical Lead Matheus Moura executed the required end-to-end Staging UAT on **2026-09-08** against the business-controlled non-Production Staging environment.
-
-- Required scenarios: **19**
-- Passed: **19**
-- Failed: **0**
-- Submission-blocking defects discovered: **0**
-- Successful workflows covered registration, save/resume, registration completion, valid authentication, password-recovery delivery/token lifecycle and Active-member restricted access.
-- Negative workflows covered password validation, duplicate normalization, login/recovery non-enumeration, invalid/consumed reset tokens and anonymous/Pending/Suspended authorization.
-- Same-session Active -> Suspended stale-state authorization was explicitly exercised and passed with immediate denial on the next request without reauthentication.
-
-Full execution evidence is recorded in `docs/phase-0/milestone-3-uat.md`.
+Executed 2026-09-08 against business-controlled non-Production Staging: **19 required / 19 PASS / 0 FAIL / 0 new submission-blocking defects**. Same-session Active -> Suspended immediate denial was included.
 
 ### Gate D — Scorecard and commercial analysis — COMPLETE
 
-The Phase 0 evidence scorecard has been reconciled through Technical Lead Staging UAT.
+Phase 0 human-effort evidence: **59–69h**, **64h planning midpoint**. M3 is a retrospective approximate range and no unsupported category split is invented. AI assistance was material but no numeric percentage saving is claimed.
 
-Supported human-effort evidence:
+### Gate E — Final recommendation — COMPLETE
 
-- M1: **15.0h** actual/reconstructed human effort.
-- M2: **24.0h** final confirmed human effort.
-- M3: **20–30h** retrospective approximate actual human-effort range supplied by the Technical Lead, with **25h** used only as a planning midpoint.
-- Phase 0: **59–69h** human-effort range, **64h planning midpoint**.
+Final Technical Lead decision: **GO WITH CONDITIONS**.
 
-The M3 category-level split was not contemporaneously recorded. No allocation among AI supervision, review, documentation, UAT, testing or commercial analysis is invented.
+Full-build recalculation:
 
-Quality/rework evidence:
+- Original Scenario A: 5,180h / BRL 1,010,100 / 141 weeks.
+- Revised Scenario A: **4,540h / ~BRL 885,600 / 120–128 weeks**.
+- Original Scenario B: 6,590h / BRL 942,700 / 71 weeks.
+- Revised Scenario B: **5,770h / ~BRL 825,300 / 60–64 weeks**.
+- Preferred planning model: **revised Scenario B**.
 
-- M1 explicit rework: **1.0h / 15.0h = 6.7%**.
-- M2 identifiable correction/rework-related effort: **6.0h / 24.0h = 25.0%**.
-- Phase 0 identifiable correction/rework evidence: **at least 7.0h**; a complete Phase 0 rework percentage is not claimed because M3 category-level rework was not separately measured.
-- M3 Technical Lead UAT: **19/19 PASS, 0 FAIL, 0 new submission-blocking defects**.
+The reduction is workstream-based and reflects direct Phase 0 reuse plus reduced implementation uncertainty; it is not represented as a blanket AI discount.
 
-AI-assisted productivity conclusion:
+Fundraising Visual Prototype estimate:
 
-- AI materially assisted delivery, review and evidence preparation.
-- The evidence does not support a defensible numeric percentage of hours saved or a counterfactual non-AI duration.
-- Human Technical Lead supervision remained necessary for scope interpretation, review, correction, Staging configuration, security/architecture judgment and browser-level UAT.
-- Future planning may assume continued AI assistance under accountable human review, but not unsupervised AI delivery or a blanket percentage efficiency reduction.
+- **87–112h**, ~100h midpoint;
+- recommended fixed fee **BRL 15,000**;
+- **3–4 weeks**;
+- incremental licensed/design-tool allowance BRL 0–1,500 only if required and separately approved;
+- execution remains **NOT AUTHORIZED** without explicit written Product Owner approval.
 
-Commercial-analysis rule established by Gate D:
+Detailed Gate E outputs:
 
-- the prior full-build estimate remains the comparison baseline;
-- the revised full-build estimate must be recalculated by workstream, explicitly accounting for Phase 0 reuse, remaining implementation, human review/testing, expected AI assistance and contingency;
-- the fundraising visual prototype remains separate, unexecuted scope and requires explicit authorization before implementation;
-- approximate/unmeasured Phase 0 metrics must not be converted into false precision.
+- `docs/phase-0/revised-full-build-estimate.md`
+- `docs/phase-0/fundraising-visual-prototype-estimate.md`
+- `docs/phase-0/milestone-3-final-recommendation.md`
 
-Detailed metrics and qualifications are recorded in `docs/phase-0/phase-0-scorecard.md` and `docs/phase-0/effort-log.md`.
+## Final recommendation conditions
 
-### Gate E — Final recommendation — NEXT
-
-Prepare the final Technical Lead recommendation as exactly one of:
-
-- **GO** — evidence supports proceeding to full-MVP commercial/technical planning;
-- **GO WITH CONDITIONS** — proceed only subject to listed technical/commercial conditions;
-- **NO-GO** — pilot evidence does not support proceeding under the evaluated approach.
-
-The recommendation must address architecture, security, maintainability, testing quality, delivery predictability, rework/defect rate, human supervision burden, AI-assisted delivery effectiveness, cost/time evidence and residual risks.
-
-Gate E must also complete the closeout commercial comparison requested after the original Phase 0 authorization:
-
-- original full-build planning baseline;
-- revised full-build estimate informed by Phase 0, calculated workstream by workstream;
-- separate Fundraising Visual Prototype estimate against the supplied approved BRD;
-- explanation of what changed and why, including reuse, AI assistance, human review/testing, contingency, assumptions and exclusions.
-
-The prototype estimate is a planning/commercial deliverable only. Prototype execution is **not authorized** by Milestone 3.
+The full list is recorded in `milestone-3-final-recommendation.md`. Key conditions include resilient asynchronous critical email, removal of Phase 0 UAT-only Production exposure, authentication/recovery abuse controls, scalable authorization policy structure, provider decisions/quotes, mandatory human QA/security/accessibility review, adequate Trust & Safety capacity, acceptance-based milestones, visible contingency, and business-owned infrastructure/accounts.
 
 ## Submission gate
 
-Milestone 3 is ready for Product Owner acceptance testing/review only when all of the following are true:
+Substantive Gates A-E are complete. Remaining mechanics before Product Owner submission:
 
-- all required deliverables are complete;
-- Technical Lead architecture/security/code review is complete;
-- Technical Lead Staging UAT success and negative scenarios are completed and recorded;
-- all submission-blocking defects found by that UAT are corrected and retested;
-- CI is green on the final submission head;
-- final effort/rework/defect figures are reconciled;
-- final recommendation is explicitly recorded;
-- evidence references the final commit SHA and CI run;
-- revised full-build and fundraising-prototype estimates are clearly separated and presented as planning/commercial outputs, not implementation authorization.
+- wait for/confirm CI green on the final documentation head;
+- record final commit SHA and CI run as submission evidence;
+- open the Milestone 3 submission PR against `main`;
+- submit the evidence package to Product Owner Michael Fitzgerald for acceptance.
 
-The goal is a Technical Lead submission that has already been independently validated and is believed ready for Product Owner acceptance, minimizing correction/resubmission cycles.
+No full-build or fundraising-prototype implementation is authorized by completion of Phase 0 or Gate E.
