@@ -88,13 +88,16 @@ Supported observations are:
 - Human Technical Lead supervision remained necessary for scope interpretation, review, defect correction, Staging configuration, security/architecture judgment, end-to-end UAT and acceptance evidence.
 - M2 demonstrates that AI-assisted implementation did not eliminate correction/review cycles: 6.0h of the final 24.0h were identifiable as correction/rework-related effort.
 - M3 demonstrates the value of independent human validation: 19 browser-level scenarios were executed by the Technical Lead even though automated CI was already green.
+- M3 closeout also required Product Owner reconciliation of documentation/status inconsistencies before acceptance readiness, reinforcing that acceptance should not substitute for Technical Lead quality control.
 - Phase 0 therefore supports continued AI-assisted delivery as an acceleration mechanism under accountable human technical leadership; it does not support unsupervised AI implementation as a planning assumption.
 
 ## Cost / effort observations
 
 The Phase 0 fixed commercial amount is **BRL 18,000**. The observed human-effort evidence through Gate E is **59–69 hours**, with a **64-hour planning midpoint**. Dividing fixed milestone price by those hours would describe the commercial Phase 0 package, not an agreed hourly labor rate, so this scorecard does not use that arithmetic as a future pricing basis.
 
-Phase 0 has produced reusable technical foundations and evidence around Rails project structure, CI, Staging, account states, registration, authentication, password recovery and authorization. Reuse should reduce some future full-build work, but Phase 0 does not provide enough evidence to apply a single blanket percentage reduction to the original full-build estimate. The revised full-build estimate was therefore recalculated by workstream and explicitly distinguishes reusable Phase 0 work, remaining implementation, human review/testing, expected AI-assisted acceleration and contingency.
+The Product Owner requested a **BRL 125/hour planning basis** for the final commercial recalibration. Applying that basis together with a fresh workstream analysis produces the current preferred full-build planning model of **5,020h / BRL 627,500 labor**, with **40–46 weeks expected to Production** and **32–36 weeks expected to Beta**. The recalibrated Fundraising Visual Prototype is **57–70h (~64h midpoint) / BRL 8,500 recommended fixed fee / 1.5–2 weeks expected**.
+
+These are planning outputs, not factual measurements of a universal AI efficiency rate and not authorization to execute either scope. Detailed rationale and schedule are in `revised-full-build-estimate.md`, `fundraising-visual-prototype-estimate.md`, and `milestone-3-commercial-recalibration.md`.
 
 ## Metrics not reliably measured
 
@@ -113,6 +116,6 @@ The following remain **not reliably measured** and must not be presented as fact
 
 **Gate E — COMPLETE.**
 
-The scorecard, final Technical Lead recommendation, revised full-build estimate, separate Fundraising Visual Prototype estimate, commercial comparison, and submission evidence have been completed. **PR #7 is the formal Milestone 3 submission.**
+The scorecard, final Technical Lead recommendation, revised/recalibrated full-build estimate, recalibrated Fundraising Visual Prototype estimate, commercial comparison, and submission evidence have been completed. **PR #7 is the formal Milestone 3 submission.**
 
 The remaining Phase 0 closeout action is **Product Owner review and acceptance of PR #7**, subject to the submission head remaining green in CI. No additional implementation scope is authorized by this submission.
