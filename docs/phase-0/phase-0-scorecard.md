@@ -2,9 +2,9 @@
 
 ## Status
 
-**Milestone 3 working baseline — not final / not yet submitted for Product Owner acceptance.**
+**GATE D COMPLETE — Phase 0 evidence scorecard reconciled through Technical Lead Staging UAT. Final Product Owner submission remains pending Gate E recommendation and final CI/SHA evidence.**
 
-This scorecard consolidates only metrics supported by the Phase 0 evidence currently recorded in the repository. Missing measurements remain explicitly unreported rather than estimated without evidence.
+This scorecard consolidates only metrics supported by the Phase 0 evidence recorded in the repository or explicitly supplied by the Technical Lead. Missing measurements remain explicitly unreported rather than estimated without evidence.
 
 ## Commercial baseline
 
@@ -12,59 +12,53 @@ This scorecard consolidates only metrics supported by the Phase 0 evidence curre
 |---|---|---:|---|---|
 | M1 | Foundation | BRL 5,400 | Completed | Not restated here without a specific payment record in the current evidence set |
 | M2 | Accepted Pilot Slices | BRL 7,200 | Accepted; PR #4 merged | Paid — confirmed by Matheus Moura on 2026-09-04 |
-| M3 | Evidence & Recommendation | BRL 5,400 | In progress | Not yet due |
-| **Phase 0** |  | **BRL 18,000** | In progress |  |
+| M3 | Evidence & Recommendation | BRL 5,400 | Gate D complete; final recommendation/submission pending | Not yet due |
+| **Phase 0** |  | **BRL 18,000** | Final closeout in progress |  |
 
-## Human-effort baseline
+## Human-effort evidence
 
-| Metric | Milestone 1 | Milestone 2 | Phase 0 recorded subtotal before M3 |
-|---|---:|---:|---:|
-| Actual/reconstructed human effort | 15.0h | 24.0h | **39.0h** |
-| Specification / clarification | Not separately recorded | 2.0h in confirmed baseline | At least 2.0h; not fully comparable across milestones |
-| Human implementation / documentation | 7.0h | 8.0h in confirmed baseline | 15.0h in explicitly categorized records |
-| AI-assisted work / supervision | 3.5h | 3.0h in confirmed baseline | 6.5h in explicitly categorized records |
-| Human review | 1.5h | 2.0h in confirmed baseline | 3.5h in explicitly categorized records |
-| Rework | 1.0h | 2.0h in confirmed baseline | 3.0h in explicitly categorized records |
-| Testing / Staging validation | 2.0h | 3.0h in confirmed baseline | 5.0h in explicitly categorized records |
-| Defect correction | No separate M1 defect-correction amount recorded | 1.0h in confirmed baseline | 1.0h explicitly categorized |
-| Post-baseline aggregate correction/UAT | — | 3.0h | 3.0h |
+| Metric | Milestone 1 | Milestone 2 | Milestone 3 | Phase 0 |
+|---|---:|---:|---:|---:|
+| Actual / reconstructed / TL-supplied approximate human effort | 15.0h | 24.0h | 20–30h retrospective range | **59–69h range** |
+| Planning midpoint | 15.0h | 24.0h | 25.0h | **64.0h** |
+| Specification / clarification | Not separately recorded | 2.0h in confirmed baseline | Not reliably separated | At least 2.0h; not fully comparable |
+| Human implementation / documentation | 7.0h | 8.0h in confirmed baseline | Not reliably separated | 15.0h explicitly categorized before M3 |
+| AI-assisted work / supervision | 3.5h | 3.0h in confirmed baseline | Present but not reliably separated | 6.5h explicitly categorized before M3; no valid final numeric total |
+| Human review | 1.5h | 2.0h in confirmed baseline | Material component but not reliably separated | 3.5h explicitly categorized before M3; no valid final numeric total |
+| Rework / correction | 1.0h explicit rework | 6.0h identifiable correction/rework-related effort | No new UAT defect/rework amount separately identified | **At least 7.0h identifiable** |
+| Testing / Staging validation | 2.0h | 3.0h in confirmed baseline plus part of 3.0h aggregate | Material M3 UAT component but not reliably separated | Not reliably comparable as a final numeric total |
 
-### Comparability note
+### Milestone 3 measurement qualification
 
-The Milestone 2 3.0h post-baseline correction/UAT amount was intentionally retained as an aggregate because no reliable category-level split was recorded. It must not be redistributed across implementation, testing, rework, or defect correction for presentation purposes.
+On 2026-09-08, Technical Lead Matheus Moura supplied a retrospective approximate actual M3 human-effort range of **20–30 hours**. A **25-hour midpoint** is retained solely for planning/comparison. It is not an exact timesheet value.
+
+No reliable category-level split was captured for M3. Therefore this scorecard does not invent allocations among AI supervision, technical review, documentation, Staging UAT, commercial analysis, testing, or correction.
 
 ## Rework / correction indicators
 
 ### Milestone 1
 
-- Explicit rework recorded: **1.0h**.
-- Recorded M1 effort: **15.0h**.
-- Simple explicit-rework share: **6.7%** (1.0 / 15.0), provided only as an effort ratio based on the existing log.
+- Explicit rework recorded: **1.0h / 15.0h = 6.7%**.
 - No separate material source-line rewrite percentage was reliably measured.
 
 ### Milestone 2
 
-- Explicit baseline rework: **2.0h**.
-- Explicit baseline defect correction: **1.0h**.
-- Post-baseline correction/UAT aggregate: **3.0h**.
-- Total identifiable correction/rework-related effort: **6.0h**.
-- Final M2 effort: **24.0h**.
-- Identifiable correction/rework-related effort share: **25.0%**.
-- This is an effort-based metric, not a literal percentage of source-code lines rewritten.
+- Identifiable correction/rework-related effort: **6.0h / 24.0h = 25.0%**.
+- This consists of the prior confirmed 3.0h aggregate rework + defect correction and the confirmed 3.0h post-baseline correction/UAT cycle.
+- This is an effort-based measure, not a literal percentage of source-code lines rewritten.
 
-### Phase 0 subtotal before Milestone 3
+### Phase 0 through Gate D
 
-- Recorded human effort: **39.0h**.
-- Identifiable M1 explicit rework + M2 correction/rework-related effort: **7.0h**.
-- Indicative recorded correction/rework effort share across the 39.0h subtotal: **17.9%**.
+- Human effort: **59–69h**, midpoint **64h**.
+- Identifiable correction/rework-related effort with explicit support: **at least 7.0h** (M1 1.0h + M2 6.0h).
+- Relative to the 64h planning midpoint, 7.0h is **10.9%**, but this must not be presented as a complete Phase 0 rework rate because M3 category-level rework was not separately measured.
+- A literal material rewrite percentage remains **not reliably measured**.
 
-This 17.9% subtotal is an arithmetic roll-up of recorded effort categories, not a normalized code-rewrite metric. It may understate categories that were not separately captured in M1 and must be interpreted with that limitation.
-
-## Accepted-output / quality evidence available so far
+## Acceptance and quality evidence
 
 ### Milestone 1
 
-- Foundation deliverables were completed and retained on `main`.
+- Foundation deliverables completed and retained on `main`.
 - Architecture/engineering standards, CI, repository governance and Staging foundation evidence are present in the Phase 0 documentation set.
 
 ### Milestone 2
@@ -74,34 +68,57 @@ This 17.9% subtotal is an arithmetic roll-up of recorded effort categories, not 
 - End-to-end password recovery through business-controlled Staging email infrastructure passed.
 - Pending/Active/Suspended authorization passed.
 - Same-session Active -> Suspended stale-state authorization denial passed.
-- M2 was explicitly accepted on 2026-09-04 and PR #4 was merged to `main`.
+- Explicit Product Owner acceptance occurred on 2026-09-04 and PR #4 was merged to `main`.
 
-## Metrics not yet reliably measured
+### Milestone 3 Technical Lead validation
 
-The following must not be presented as final numeric Phase 0 metrics until supported by actual records:
+- Technical Lead Staging UAT completed on **2026-09-08**.
+- **19/19 required scenarios PASS; 0 FAIL**.
+- Registration, save/resume, completed Pending state, authentication, password validation, duplicate-email normalization, generic invalid authentication, recovery non-enumeration, real recovery email delivery, canonical reset link, valid password reset, invalid/consumed token rejection, anonymous/Pending/Suspended authorization denial, Active access and same-session Active -> Suspended immediate denial were exercised.
+- No new submission-blocking defect was identified during M3 Technical Lead UAT.
+- Architecture, security and code-quality reviews found no Phase 0 submission blocker, while recording future-MVP conditions.
+
+## AI-assisted productivity observations
+
+AI assistance materially supported Phase 0 implementation, review and evidence preparation, but the evidence does **not** support a defensible numeric claim such as a specific percentage of hours saved or an equivalent non-AI delivery duration.
+
+Supported observations are:
+
+- AI-assisted work was explicitly part of the M1 and M2 effort records and continued as part of the M3 workflow.
+- Human Technical Lead supervision remained necessary for scope interpretation, review, defect correction, Staging configuration, security/architecture judgment, end-to-end UAT and acceptance evidence.
+- M2 demonstrates that AI-assisted implementation did not eliminate correction/review cycles: 6.0h of the final 24.0h were identifiable as correction/rework-related effort.
+- M3 demonstrates the value of independent human validation: 19 browser-level scenarios were executed by the Technical Lead even though automated CI was already green.
+- Phase 0 therefore supports continued AI-assisted delivery as an acceleration mechanism under accountable human technical leadership; it does not support unsupervised AI implementation as a planning assumption.
+
+## Cost / effort observations
+
+The Phase 0 fixed commercial amount is **BRL 18,000**. The observed human-effort evidence through Gate D is **59–69 hours**, with a **64-hour planning midpoint**. Dividing fixed milestone price by those hours would describe the commercial Phase 0 package, not an agreed hourly labor rate, so this scorecard does not use that arithmetic as a future pricing basis.
+
+Phase 0 has produced reusable technical foundations and evidence around Rails project structure, CI, Staging, account states, registration, authentication, password recovery and authorization. Reuse should reduce some future full-build work, but Phase 0 does not provide enough evidence to apply a single blanket percentage reduction to the original full-build estimate. The revised full-build estimate must be recalculated by workstream and explicitly distinguish reusable Phase 0 work, remaining implementation, human review/testing, expected AI efficiency and contingency.
+
+## Metrics not reliably measured
+
+The following remain **not reliably measured** and must not be presented as factual numeric Phase 0 results:
 
 - literal material source-code rewrite percentage;
-- accepted-output efficiency as a normalized output-per-hour measure;
-- comparable defect density across milestones;
-- comparable defect discovery rate by source (CI vs Technical Lead vs Product Owner) unless the defect log supports a complete classification;
-- Milestone 3 effort/rework/testing figures;
+- normalized accepted-output-per-hour efficiency;
+- comparable defect density across all milestones;
+- complete Phase 0 correction/rework percentage including M3;
+- exact M3 category-level effort split;
+- exact percentage of human effort saved by AI;
+- counterfactual non-AI delivery hours;
 - full Phase 0 elapsed calendar-cycle efficiency independent of human effort.
 
-Milestone 3 will either derive these from existing traceable evidence or mark them as **not reliably measured** in the final scorecard.
+## Gate D conclusion
 
-## Milestone 3 measurements to capture prospectively
+**Gate D — Scorecard and commercial-analysis evidence: COMPLETE.**
 
-For every M3 work session, record actual human effort for the categories supported by the work performed. In addition, M3 should explicitly capture:
+The evidence is sufficient to proceed to Gate E and to prepare the requested closeout commercial comparison. Gate E must use this scorecard as the evidence baseline and must not convert approximate or unmeasured values into false precision.
 
-- Technical Lead review time;
-- Technical Lead Staging UAT time;
-- defects first found during Technical Lead review/UAT;
-- correction time attributable to those defects;
-- retest time;
-- any material documentation/code rewrite and the basis used to measure it;
-- final submission-preparation time;
-- whether the first Product Owner M3 submission is accepted without corrective resubmission.
+Before final Product Owner submission, the closeout package still requires:
 
-## Finalization rule
-
-This document is a working scorecard. Final values are frozen only after Milestone 3 Technical Lead review, end-to-end Staging UAT, defect/rework reconciliation and final CI evidence are complete.
+- final Technical Lead Go / Go-with-conditions / No-Go recommendation;
+- revised full-build estimate calculated workstream by workstream from the Phase 0 evidence;
+- separate Fundraising Visual Prototype estimate, clearly identified as unexecuted separate scope requiring explicit authorization;
+- original vs revised full-build vs prototype comparison;
+- final submission-head CI/SHA evidence and PR.
