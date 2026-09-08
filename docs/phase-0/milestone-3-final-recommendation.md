@@ -16,7 +16,8 @@ Phase 0 evidence supports proceeding from pilot validation into controlled full-
 - Milestone 3 architecture, security and code-quality reviews found no Phase 0 submission blocker.
 - Technical Lead Staging UAT completed on 2026-09-08 with **19/19 PASS, 0 FAIL and 0 new submission-blocking defects**.
 - Phase 0 human-effort evidence totals **59–69h**, with a **64h planning midpoint**; M3 is a retrospective approximate range rather than an exact timesheet.
-- AI assistance materially supported delivery, but human Technical Lead supervision remained necessary and no defensible numeric AI time-saving percentage was measured.
+- AI assistance materially supported delivery, but human Technical Lead supervision remained necessary and no defensible blanket numeric AI time-saving percentage was measured.
+- The commercial recalibration therefore uses workstream-specific reuse/acceleration judgments rather than a general percentage discount.
 
 ## Technical conclusion
 
@@ -36,65 +37,84 @@ The Phase 0 result is not evidence that the remaining PRD is low-complexity. Ide
 8. **Controlled milestone acceptance:** full-build payments/delivery should remain tied to objective accepted evidence rather than elapsed time alone.
 9. **Visible contingency:** retain 10–15% management contingency until major provider and launch uncertainties are closed; do not hide contingency as implementation hours.
 10. **Business-owned infrastructure/accounts:** repositories, Production provider accounts, infrastructure ownership, credentials governance and handoff artifacts remain business-controlled.
+11. **Technical Lead quality accountability:** normal implementation/PRD-conformance correction is included in the agreed milestone/fixed delivery cost; Product Owner acceptance is not intended to be the first substantive QA pass.
 
-## Revised full-build planning result
+## Full-build commercial planning result
 
-The original Full-PRD Estimate v1.2 baseline was:
+Original Full-PRD Estimate v1.2 baseline:
 
 - Scenario A — Primary Developer: **5,180h / BRL 1,010,100 / 141 weeks**.
 - Scenario B — Lean Brazil Team: **6,590h / BRL 942,700 / 71 weeks**.
 
-Phase 0-informed revised planning estimate:
+First Phase 0-informed revision submitted in PR #7:
 
-- Scenario A: **4,540h / approximately BRL 885,600 labor / 120–128 weeks**.
-- Scenario B: **5,770h / approximately BRL 825,300 labor / 60–64 weeks**.
+- Scenario A: **4,540h / ~BRL 885,600 / 120–128 weeks**.
+- Scenario B: **5,770h / ~BRL 825,300 / 60–64 weeks**.
 
-The approximate 12.4% person-hour reduction is a workstream-by-workstream planning result, not a blanket AI-efficiency claim. The strongest reduction is in Accounts/Registration/Authentication because Phase 0 produced directly reusable implementation and evidence there. Higher-risk/new workstreams retain most of their original effort.
+New Product Owner-requested Phase 0 recalibration — preferred Lean Brazil Team model:
 
-**Preferred planning model: revised Scenario B**, because the team structure reduces calendar and key-person risk while preserving QA, UX, backend/frontend and DevOps/security participation.
+- **5,020h human effort**;
+- **BRL 125/h Product Owner planning basis**;
+- **BRL 627,500 labor**;
+- external one-time planning allowance retained at **BRL 184,000** pending current quotes/approval;
+- visible labor management contingency **BRL 62,750–94,125 (10–15%)**;
+- Phase 0-informed expected Beta: **32–36 weeks**;
+- Phase 0-informed expected Production launch: **40–46 weeks**;
+- conservative Production scenario: **52–58 weeks**;
+- aggressive but realistically achievable Production scenario: **34–38 weeks**.
 
-The original one-time external planning allowance of **BRL 184,000** remains a placeholder pending current quotes/approvals; Phase 0 did not produce enough evidence to replace it with a committed external-cost figure.
+The reduction is a workstream-by-workstream output based on direct Phase 0 reuse, AI-assisted construction suitability, required Technical Lead/QA effort, provider constraints and unvalidated risk. It is not a blanket AI-efficiency claim.
 
 Detailed calculation: `docs/phase-0/revised-full-build-estimate.md`.
+Single-place commercial comparison: `docs/phase-0/milestone-3-commercial-recalibration.md`.
 
-## Fundraising Visual Prototype estimate
+## Fundraising Visual Prototype planning result
 
-The approved Fundraising Visual Prototype BRD v1.0 is separate scope from Phase 0 and the full Production build.
+Prior estimate:
 
-Planning estimate:
+- **87–112h**, ~100h midpoint;
+- BRL 150/h prior basis;
+- BRL 15,000 recommended fixed fee;
+- 3–4 weeks.
 
-- **87–112h** human effort;
-- approximately **100h midpoint**;
-- **BRL 13,050–16,800** at BRL 150/h planning basis;
-- recommended **BRL 15,000 fixed fee** for the controlled BRD scope;
-- **3–4 calendar weeks**, dependent on Product Owner turnaround at seven approval gates;
+New Phase 0-recalibrated estimate:
+
+- **57–70h**, approximately **64h midpoint**;
+- **BRL 125/h** Product Owner planning basis;
+- midpoint labor value **BRL 8,000**;
+- recommended **BRL 8,500 fixed fee** for the controlled BRD scope, including normal conformance correction and internal QA;
+- expected elapsed **1.5–2 weeks**;
+- conservative **2.5–3 weeks**;
+- aggressive but realistically achievable **5–7 business days**;
 - incremental licensed/design-tool allowance **BRL 0–1,500 only if required and separately approved**.
+
+The prototype requires documented Technical Lead QA before every Product Owner gate, including BRD/PRD traceability, unsupported-feature checks, brand/asset conformity, interaction/navigation consistency, responsive-state review and correction before presentation.
 
 Prototype execution is **NOT AUTHORIZED** by this recommendation. Explicit written Product Owner authorization is required before billable prototype implementation or material third-party commitments.
 
 Detailed estimate: `docs/phase-0/fundraising-visual-prototype-estimate.md`.
 
-## Requested commercial comparison
+## Quality and rework commercial model
 
-| Item | Human effort | Labor / fixed fee | Calendar | Status |
-|---|---:|---:|---:|---|
-| Original Full Build — Scenario A | 5,180h | BRL 1,010,100 | 141 weeks | Superseded planning baseline for comparison |
-| Original Full Build — Scenario B | 6,590h | BRL 942,700 | 71 weeks | Superseded planning baseline for comparison |
-| Revised Full Build — Scenario A | 4,540h | ~BRL 885,600 | 120–128 weeks | Planning estimate; not authorized |
-| **Revised Full Build — Scenario B (preferred)** | **5,770h** | **~BRL 825,300** | **60–64 weeks** | **Preferred planning model; not authorized** |
-| Fundraising Visual Prototype | 87–112h (~100h midpoint) | BRL 15,000 recommended fixed fee | 3–4 weeks | Separate scope; execution not authorized |
+The Technical Lead role includes directing AI-generated work, reviewing it against the controlling requirements and architecture, testing, identifying deficiencies, correcting those deficiencies, and deciding the deliverable is genuinely ready for acceptance.
+
+Normal in-scope correction required to bring an authorized deliverable into conformance with approved requirements is **included in the agreed milestone/fixed price**. Product Owner identification of an implementation or PRD/BRD-conformance defect does not itself make that correction separately billable. Separate billing requires a written scope change, newly introduced requirement, changed external assumption or other explicitly authorized out-of-scope work.
+
+For the full-build team, independent QA participation is assumed in addition to Technical Lead review. Mandatory pre-acceptance gates include requirements traceability, Technical Lead review, automated test/lint/security checks, browser/system UAT with negative paths, responsive/accessibility review, independent QA where staffed, defect correction/retest, and evidence/status reconciliation.
+
+Repeated Product Owner discovery of issues that should reasonably have been identified in Technical Lead review would require corrective action to the delivery/QA process and, if persistent, reassessment of role/accountability or staffing — not automatic incremental defect-correction billing.
 
 ## AI-assisted productivity conclusion
 
 Phase 0 supports continued AI-assisted engineering/design as an acceleration mechanism under accountable human leadership. It does not support unsupervised AI delivery or a contractual assumption that AI removes a fixed percentage of engineering hours.
 
-The practical evidence is mixed in the useful sense: AI supported fast implementation/review/documentation, while M2 still required material correction/rework and M3 still required independent human browser UAT despite green automated CI. The appropriate planning model is therefore **AI-assisted + human-reviewed + acceptance-tested**.
+The practical evidence is mixed in the useful sense: AI supported fast implementation/review/documentation, while M2 still required material correction/rework and M3 still required independent human browser UAT and Product Owner documentation reconciliation despite green automated CI. The appropriate planning model is therefore **AI-assisted + human-reviewed + acceptance-tested**.
 
 ## Gate E conclusion
 
 **Gate E — COMPLETE. Final recommendation: GO WITH CONDITIONS.**
 
-The Phase 0 technical/evidence work is substantively complete. **PR #7 has been opened as the formal Milestone 3 submission, and final submission-head CI/SHA evidence has been recorded.**
+The Phase 0 technical/evidence work is substantively complete. PR #7 remains the formal Milestone 3 submission, now updated with the Product Owner-requested commercial recalibration.
 
 The remaining closeout action is **Product Owner review and acceptance**, subject to the current submission head remaining green in CI.
 
