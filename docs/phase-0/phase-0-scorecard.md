@@ -2,7 +2,7 @@
 
 ## Status
 
-**GATE D COMPLETE — Phase 0 evidence scorecard reconciled through Technical Lead Staging UAT. Final Product Owner submission remains pending Gate E recommendation and final CI/SHA evidence.**
+**GATE E COMPLETE — Phase 0 evidence scorecard and final Technical Lead recommendation are complete. PR #7 is the formal Milestone 3 submission for Product Owner review and acceptance.**
 
 This scorecard consolidates only metrics supported by the Phase 0 evidence recorded in the repository or explicitly supplied by the Technical Lead. Missing measurements remain explicitly unreported rather than estimated without evidence.
 
@@ -12,8 +12,8 @@ This scorecard consolidates only metrics supported by the Phase 0 evidence recor
 |---|---|---:|---|---|
 | M1 | Foundation | BRL 5,400 | Completed | Not restated here without a specific payment record in the current evidence set |
 | M2 | Accepted Pilot Slices | BRL 7,200 | Accepted; PR #4 merged | Paid — confirmed by Matheus Moura on 2026-09-04 |
-| M3 | Evidence & Recommendation | BRL 5,400 | Gate D complete; final recommendation/submission pending | Not yet due |
-| **Phase 0** |  | **BRL 18,000** | Final closeout in progress |  |
+| M3 | Evidence & Recommendation | BRL 5,400 | Gate E complete; submitted in PR #7 for Product Owner acceptance | Pending Product Owner acceptance |
+| **Phase 0** |  | **BRL 18,000** | Formal closeout submission under Product Owner review |  |
 
 ## Human-effort evidence
 
@@ -47,7 +47,7 @@ No reliable category-level split was captured for M3. Therefore this scorecard d
 - This consists of the prior confirmed 3.0h aggregate rework + defect correction and the confirmed 3.0h post-baseline correction/UAT cycle.
 - This is an effort-based measure, not a literal percentage of source-code lines rewritten.
 
-### Phase 0 through Gate D
+### Phase 0 through Gate E
 
 - Human effort: **59–69h**, midpoint **64h**.
 - Identifiable correction/rework-related effort with explicit support: **at least 7.0h** (M1 1.0h + M2 6.0h).
@@ -92,9 +92,9 @@ Supported observations are:
 
 ## Cost / effort observations
 
-The Phase 0 fixed commercial amount is **BRL 18,000**. The observed human-effort evidence through Gate D is **59–69 hours**, with a **64-hour planning midpoint**. Dividing fixed milestone price by those hours would describe the commercial Phase 0 package, not an agreed hourly labor rate, so this scorecard does not use that arithmetic as a future pricing basis.
+The Phase 0 fixed commercial amount is **BRL 18,000**. The observed human-effort evidence through Gate E is **59–69 hours**, with a **64-hour planning midpoint**. Dividing fixed milestone price by those hours would describe the commercial Phase 0 package, not an agreed hourly labor rate, so this scorecard does not use that arithmetic as a future pricing basis.
 
-Phase 0 has produced reusable technical foundations and evidence around Rails project structure, CI, Staging, account states, registration, authentication, password recovery and authorization. Reuse should reduce some future full-build work, but Phase 0 does not provide enough evidence to apply a single blanket percentage reduction to the original full-build estimate. The revised full-build estimate must be recalculated by workstream and explicitly distinguish reusable Phase 0 work, remaining implementation, human review/testing, expected AI efficiency and contingency.
+Phase 0 has produced reusable technical foundations and evidence around Rails project structure, CI, Staging, account states, registration, authentication, password recovery and authorization. Reuse should reduce some future full-build work, but Phase 0 does not provide enough evidence to apply a single blanket percentage reduction to the original full-build estimate. The revised full-build estimate was therefore recalculated by workstream and explicitly distinguishes reusable Phase 0 work, remaining implementation, human review/testing, expected AI-assisted acceleration and contingency.
 
 ## Metrics not reliably measured
 
@@ -109,16 +109,10 @@ The following remain **not reliably measured** and must not be presented as fact
 - counterfactual non-AI delivery hours;
 - full Phase 0 elapsed calendar-cycle efficiency independent of human effort.
 
-## Gate D conclusion
+## Gate E conclusion
 
-**Gate D — Scorecard and commercial-analysis evidence: COMPLETE.**
+**Gate E — COMPLETE.**
 
-The evidence is sufficient to proceed to Gate E and to prepare the requested closeout commercial comparison. Gate E must use this scorecard as the evidence baseline and must not convert approximate or unmeasured values into false precision.
+The scorecard, final Technical Lead recommendation, revised full-build estimate, separate Fundraising Visual Prototype estimate, commercial comparison, and submission evidence have been completed. **PR #7 is the formal Milestone 3 submission.**
 
-Before final Product Owner submission, the closeout package still requires:
-
-- final Technical Lead Go / Go-with-conditions / No-Go recommendation;
-- revised full-build estimate calculated workstream by workstream from the Phase 0 evidence;
-- separate Fundraising Visual Prototype estimate, clearly identified as unexecuted separate scope requiring explicit authorization;
-- original vs revised full-build vs prototype comparison;
-- final submission-head CI/SHA evidence and PR.
+The remaining Phase 0 closeout action is **Product Owner review and acceptance of PR #7**, subject to the submission head remaining green in CI. No additional implementation scope is authorized by this submission.
